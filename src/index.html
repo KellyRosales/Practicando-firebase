@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Social Network</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Luego de loguearse -->
+    <div id="login" class="hiden">
+        <p id="user_name"></p>
+        <input type="button" id="btnLogout" value="Logout">
+    </div>
+
+    <!-- antes de loguearse -->
+    <div id="logout">
+        <form>
+            <label for="email">Email : </label>
+            <input type="email" id="email">
+
+            <label for="password">Password : </label>
+            <input type="password" id="password">
+            
+            <input type="button" value="register" id="register">
+            <input type="button" value="btnSignin" id="btnSignin">
+            <input type="button" value="btnGoogle" id="btnGoogle">
+        </form>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDCDLCa2XKFLjM9Hd9ckLoqJAxsZfNuauI",
+            authDomain: "social-network-b0681.firebaseapp.com",
+            databaseURL: "https://social-network-b0681.firebaseio.com",
+            projectId: "social-network-b0681",
+            storageBucket: "social-network-b0681.appspot.com",
+            messagingSenderId: "154833263446"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
